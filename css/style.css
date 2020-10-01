@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'Inter';
+    src: url(../assets/fonts/Inter-VariableFont_slnt\,wght.ttf) format("truetype");
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    font-family: Inter;
+    /* hard cut-off */
+    background: linear-gradient(hsl(232, 19%, 15%) 20%, hsl(230, 17%, 14%) 0%);
+}
+
+body.light_background {
+    background: linear-gradient(hsl(225, 100%, 98%) 20%, hsl(0, 0%, 100%) 0%);
+}
+.container {
+    width: 80%;
+    max-width: 1440px;
+    height: 100%;
+    margin: auto;
+}
