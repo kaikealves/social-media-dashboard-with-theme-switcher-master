@@ -18,76 +18,148 @@
 </head>
 <body>
   <div class="container">
-    <nav>
-      <div class="title">
-        Social Media Dashboard
-        Total Followers: 23,004
+    <nav class="header">
+      <div class="header__title">
+        <h1>
+          Social Media Dashboard
+        </h1>
+        <h5>
+          Total Followers: 23,004
+        </h5>
       </div>  
-      <div class="toggle_button">
-        Dark Mode
+      <div class="header__toggle_mode">
+        <label>
+          Dark Mode
+        </label>
+        <input type="checkbox">
       </div>
     </nav>
+  
+    <section class="card_row">
+      <div class="card followers_row__card" id="facebook">
+        <div class="followers_row__card__bar"></div> 
+        <p class="followers_row__card__id">
+          <a href="https://facebook.com"><img class="social_media_image" src="images/icon-facebook.svg" alt=""></a> 
+          <span>@nathanf</span>
+        </p>
+        <p class="followers_row__card__number">1987</p>
+        <p class="followers_row__card__followers">Followers</p>
+        <p class="variation_up"><img src="images/icon-up.svg" alt="up"> 12 Today</p>
+      </div>
+      <div class="card followers_row__card" id="twitter">
+        <p class="followers_row__card__id">
+          <a href="https://twitter.com"><img class="social_media_image" src="images/icon-twitter.svg" alt=""></a>
+          <span>@nathanf</span>
+        </p>
+        <p class="followers_row__card__number">1044</p>
+        <p class="followers_row__card__followers">Followers</p>
+        <p class="variation_up"><img src="images/icon-up.svg" alt="up"> 99 Today</p>
+      </div>
+      <div class="card followers_row__card" id="instagram">
+        <p class="followers_row__card__id">
+          <a href="https://intagram.com"><img class="social_media_image" src="images/icon-instagram.svg" alt=""></a>
+          <span>@realnathanf</span>
+        </p>
+        <p class="followers_row__card__number">11k</p>
+        <p class="followers_row__card__followers">Followers</p>
+        <p class="variation_up"><img src="images/icon-up.svg" alt="up"> 1099 Today</p>
+      </div>
+      <div class="card followers_row__card" id="youtube">
+        <p class="followers_row__card__id">
+          <a href="https://intagram.com"><img class="social_media_image" src="images/icon-youtube.svg" alt=""></a>
+          <span>Nathan F.</span>
+        </p>
+        <p class="followers_row__card__number">8239</p>
+        <p class="followers_row__card__followers">Subscribers</p>
+        <p class="variation_down"> <img src="images/icon-down.svg" alt="down"> 144 Today</p>
+      </div>
+    </section>
+  
+    <section class="overview_title">
+      <h1>Overview - Today</h1>
+    </section>
 
+   <section class="card_row">
+     <div class="card overview_stats__card">
+      <div class="overview_stats__card__row">
+        <p class="overview_stats__card__title">Page Views</p>
+        <img class="social_media_image" src="images/icon-facebook.svg" alt="facebook_icon">
+      </div>
+      <div class="overview_stats__card__row">
+        <h1>87</h1>
+        <p class="variation_up">3%</p>
+      </div>
+     </div>
+    <div class="card overview_stats__card">
+      <div class="overview_stats__card__row">
+        <p class="overview_stats__card__title">Likes</p>
+        <img class="social_media_image" src="images/icon-facebook.svg" alt="facebook_icon">
+      </div>
+      <div class="overview_stats__card__row">
+        <h1>52</h1>
+        <p class="variation_down">2%</p> 
+      </div>
+    </div>
+    <div class="card overview_stats__card">
+      <div class="overview_stats__card__row">
+        <p class="overview_stats__card__title">Likes</p>
+        <img class="social_media_image" src="images/icon-instagram.svg" alt="instagram_icon">
+      </div>
+      <div class="overview_stats__card__row">
+        <h1>5462</h1>
+        <p class="variation_up">2257%</p>
+      </div>  
+    </div>
+    <div class="card overview_stats__card">
+      <div class="overview_stats__card__row">
+        <p class="overview_stats__card__title">Profile Views</p>
+        <img class="social_media_image" src="images/icon-instagram.svg" alt="instagram_icon">
+      </div>
+      <div class="overview_stats__card__row">
+        <h1>52k</h1>
+        <p class="variation_up">1375%</p>
+      </div>
+    </div>
+   </section>
+
+   <section class="card_row">
+    <div class="card overview_stats__card">
+      <div class="overview_stats__card__row">
+        <p class="overview_stats__card__title">Retweets</p>
+        <img class="social_media_image" src="images/icon-twitter.svg" alt="twitter_icon">
+      </div>
+      <div class="overview_stats__card__row">
+        <h1>117</h1>
+        <p class="variation_up">303%</p>
+      </div>
+    </div>
+    <div class="card overview_stats__card">
+      <div class="overview_stats__card__row">
+        <p class="overview_stats__card__title">Likes</p>
+        <img class="social_media_image" src="images/icon-twitter.svg" alt="twitter_icon">
+      </div>
+      507
+      <p class="variation_up">553%</p>
+    </div>
+    <div class="card overview_stats__card">
+      <div class="overview_stats__card__row">
+        <p class="overview_stats__card__title">Likes</p>
+        <img class="social_media_image" src="images/icon-youtube.svg" alt="youtube_icon">
+      </div>
+      107
+      <p class="variation_up">19%</p>
+    </div>
+    <div class="card overview_stats__card">
+      <div class="overview_stats__card__row">
+        <p class="overview_stats__card__title">Views</p>
+        <img class="social_media_image" src="images/icon-youtube.svg" alt="youtube_icon">
+      </div>
+      1407
+      <p class="variation_up">12%</p>
+    </div>
+   </section>
 
     
-
-    @nathanf
-    1987
-    Followers
-    12 Today
-
-    @nathanf
-    1044
-    Followers
-    99 Today
-
-    @realnathanf
-    11k
-    Followers
-    1099 Today
-
-    Nathan F.
-    8239
-    Subscribers
-    144 Today
-
-
-
-    Overview - Today
-
-    Page Views
-    87
-    3%
-
-    Likes
-    52
-    2%
-
-    Likes
-    5462
-    2257%
-
-    Profile Views
-    52k
-    1375%
-
-    Retweets
-    117
-    303%
-
-    Likes
-    507
-    553%
-
-    Likes
-    107
-    19%
-
-    Total Views
-    1407
-    12%
-  
-
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
       Coded by <a href="#">Kaike Alves Silva</a>.
