@@ -6,9 +6,11 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="css/style.css">
-  
-  
-  <title>Frontend Mentor | [Challenge Name Here]</title>
+
+
+  <title>Frontend Mentor | [Social media dashboard with theme switcher]</title>
+
+  <script src="index.js"></script>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
@@ -23,145 +25,197 @@
         <h1>
           Social Media Dashboard
         </h1>
-        <h5>
+        <h5 class="header__title__subtitle">
           Total Followers: 23,004
         </h5>
-      </div>  
+      </div>
       <div class="header__toggle_mode">
         <label>
           Dark Mode
         </label>
-        <input type="checkbox">
+        <input type="checkbox" onchange="toggleToLight(this)" />
       </div>
     </nav>
-  
+
     <section class="card_row">
-      <div class="card followers_row__card" id="facebook">
-        <div class="followers_row__card__bar"></div> 
-        <p class="followers_row__card__id">
-          <a href="https://facebook.com"><img class="social_media_image" src="images/icon-facebook.svg" alt=""></a> 
-          <span>@nathanf</span>
-        </p>
-        <p class="followers_row__card__number">1987</p>
-        <p class="followers_row__card__followers">Followers</p>
-        <p class="variation_up"><img src="images/icon-up.svg" alt="up"> 12 Today</p>
+      <div class="card" id="facebook">
+        <div class="card__top_bar card__top_bar--facebook"></div>
+          <div class="card__followers">
+          <p class="card__followers__id">
+            <a href="https://facebook.com"><img class="social_media_image" src="images/icon-facebook.svg" alt=""></a> 
+            <span>@nathanf</span>
+          </p>
+          <p class="card__followers__number">1987</p>
+          <p class="card__followers__followers">Followers</p>
+          <p class="variation">
+            <img src="images/icon-up.svg" alt="up">
+            <span class="variation_text">12 Today</span>
+          </p>
+        </div>
       </div>
-      <div class="card followers_row__card" id="twitter">
-        <p class="followers_row__card__id">
-          <a href="https://twitter.com"><img class="social_media_image" src="images/icon-twitter.svg" alt=""></a>
-          <span>@nathanf</span>
-        </p>
-        <p class="followers_row__card__number">1044</p>
-        <p class="followers_row__card__followers">Followers</p>
-        <p class="variation_up"><img src="images/icon-up.svg" alt="up"> 99 Today</p>
+      <div class="card" id="twitter">
+        <div class="card__top_bar card__top_bar--twitter"></div>
+        <div class="card__followers">
+          <p class="card__followers__id">
+            <a href="https://twitter.com"><img class="social_media_image" src="images/icon-twitter.svg" alt=""></a>
+            <span>@nathanf</span>
+          </p>
+          <p class="card__followers__number">1044</p>
+          <p class="card__followers__followers">Followers</p>
+          <p class="variation">
+            <img src="images/icon-up.svg" alt="up">
+            <span class="variation_text">99 Today</span>
+          </p>
+        </div>
       </div>
-      <div class="card followers_row__card" id="instagram">
-        <p class="followers_row__card__id">
-          <a href="https://intagram.com"><img class="social_media_image" src="images/icon-instagram.svg" alt=""></a>
-          <span>@realnathanf</span>
-        </p>
-        <p class="followers_row__card__number">11k</p>
-        <p class="followers_row__card__followers">Followers</p>
-        <p class="variation_up"><img src="images/icon-up.svg" alt="up"> 1099 Today</p>
+      <div class="card" id="instagram">
+        <div class="card__top_bar card__top_bar--instagram"></div>
+        <div class="card__followers">
+          <p class="card__followers__id">
+            <a href="https://intagram.com"><img class="social_media_image" src="images/icon-instagram.svg" alt=""></a>
+            <span>@realnathanf</span>
+          </p>
+          <p class="card__followers__number">11k</p>
+          <p class="card__followers__followers">Followers</p>
+          <p class="variation">
+            <img src="images/icon-up.svg" alt="up">
+            <span class="variation_text">1099 Today</span>s
+          </p>
+        </div>
       </div>
-      <div class="card followers_row__card" id="youtube">
-        <p class="followers_row__card__id">
-          <a href="https://intagram.com"><img class="social_media_image" src="images/icon-youtube.svg" alt=""></a>
-          <span>Nathan F.</span>
-        </p>
-        <p class="followers_row__card__number">8239</p>
-        <p class="followers_row__card__followers">Subscribers</p>
-        <p class="variation_down"> <img src="images/icon-down.svg" alt="down"> 144 Today</p>
+      <div class="card" id="youtube">
+        <div class="card__top_bar card__top_bar--youtube"></div>
+        <div class="card__followers">
+          <p class="card__followers__id">
+            <a href="https://intagram.com"><img class="social_media_image" src="images/icon-youtube.svg" alt=""></a>
+            <span>Nathan F.</span>
+          </p>
+          <p class="card__followers__number">8239</p>
+          <p class="card__followers__followers">Subscribers</p>
+          <p class="variation variation--down">
+            <img src="images/icon-down.svg" alt="down">
+            <span class="variation_text">144 Today</span>
+          </p>
+        </div>
       </div>
     </section>
-  
+
     <section class="overview_title">
       <h1>Overview - Today</h1>
     </section>
 
    <section class="card_row">
-     <div class="card overview_stats__card">
-      <div class="overview_stats__card__row">
-        <p class="overview_stats__card__title">Page Views</p>
+     <div class="card card__overview_today">
+      <div class="card__overview_today__row">
+        <p class="card__overview_today__title">Page Views</p>
         <img class="social_media_image" src="images/icon-facebook.svg" alt="facebook_icon">
       </div>
-      <div class="overview_stats__card__row">
-        <h1>87</h1>
-        <p class="variation_up">3%</p>
+      <div class="card__overview_today__row">
+        <h1 class="card__overview_today__number">87</h1>
+        <p class="variation">
+          <img src="images/icon-up.svg" alt="up">
+          <span class="variation_text">3%</span>
+        </p>
       </div>
      </div>
-    <div class="card overview_stats__card">
-      <div class="overview_stats__card__row">
-        <p class="overview_stats__card__title">Likes</p>
+    <div class="card card__overview_today">
+      <div class="card__overview_today__row">
+        <p class="card__overview_today__title">Likes</p>
         <img class="social_media_image" src="images/icon-facebook.svg" alt="facebook_icon">
       </div>
-      <div class="overview_stats__card__row">
-        <h1>52</h1>
-        <p class="variation_down">2%</p> 
+      <div class="card__overview_today__row">
+        <h1 class="card__overview_today__number">52</h1>
+        <p class="variation variation--down">
+          <img src="images/icon-down.svg" alt="down">
+          <span class="variation_text">2%</span>
+        </p>
       </div>
     </div>
-    <div class="card overview_stats__card">
-      <div class="overview_stats__card__row">
-        <p class="overview_stats__card__title">Likes</p>
+    <div class="card card__overview_today">
+      <div class="card__overview_today__row">
+        <p class="card__overview_today__title">Likes</p>
         <img class="social_media_image" src="images/icon-instagram.svg" alt="instagram_icon">
       </div>
-      <div class="overview_stats__card__row">
-        <h1>5462</h1>
-        <p class="variation_up">2257%</p>
-      </div>  
+      <div class="card__overview_today__row">
+        <h1 class="card__overview_today__number">5462</h1>
+        <p class="variation">
+          <img src="images/icon-up.svg" alt="up">
+          <span class="variation_text">2257%</span>
+        </p>
+      </div>
     </div>
-    <div class="card overview_stats__card">
-      <div class="overview_stats__card__row">
-        <p class="overview_stats__card__title">Profile Views</p>
+    <div class="card card__overview_today">
+      <div class="card__overview_today__row">
+        <p class="card__overview_today__title">Profile Views</p>
         <img class="social_media_image" src="images/icon-instagram.svg" alt="instagram_icon">
       </div>
-      <div class="overview_stats__card__row">
-        <h1>52k</h1>
-        <p class="variation_up">1375%</p>
+      <div class="card__overview_today__row">
+        <h1 class="card__overview_today__number">52k</h1>
+        <p class="variation">
+          <img src="images/icon-up.svg" alt="up">
+          <span class="variation_text">1375%</span>
+        </p>
       </div>
     </div>
    </section>
 
    <section class="card_row">
-    <div class="card overview_stats__card">
-      <div class="overview_stats__card__row">
-        <p class="overview_stats__card__title">Retweets</p>
+    <div class="card card__overview_today">
+      <div class="card__overview_today__row">
+        <p class="card__overview_today__title">Retweets</p>
         <img class="social_media_image" src="images/icon-twitter.svg" alt="twitter_icon">
       </div>
-      <div class="overview_stats__card__row">
-        <h1>117</h1>
-        <p class="variation_up">303%</p>
+      <div class="card__overview_today__row">
+        <h1 class="card__overview_today__number">117</h1>
+        <p class="variation">
+          <img src="images/icon-up.svg" alt="up">
+          <span class="variation_text">303%</span>
+        </p>
       </div>
     </div>
-    <div class="card overview_stats__card">
-      <div class="overview_stats__card__row">
-        <p class="overview_stats__card__title">Likes</p>
+    <div class="card card__overview_today">
+      <div class="card__overview_today__row">
+        <p class="card__overview_today__title">Likes</p>
         <img class="social_media_image" src="images/icon-twitter.svg" alt="twitter_icon">
       </div>
-      507
-      <p class="variation_up">553%</p>
+      <div class="card__overview_today__row">
+        <h1 class="card__overview_today__number">507</h1>
+        <p class="variation">
+          <img src="images/icon-up.svg" alt="up">
+          <span class="variation_text">553%</span>
+        </p>
+      </div>
     </div>
-    <div class="card overview_stats__card">
-      <div class="overview_stats__card__row">
-        <p class="overview_stats__card__title">Likes</p>
+    <div class="card card__overview_today">
+      <div class="card__overview_today__row">
+        <p class="card__overview_today__title">Likes</p>
         <img class="social_media_image" src="images/icon-youtube.svg" alt="youtube_icon">
       </div>
-      107
-      <p class="variation_up">19%</p>
+      <div class="card__overview_today__row">
+        <h1 class="card__overview_today__number">107</h1>
+        <p class="variation variation--down">
+          <img src="images/icon-down.svg" alt="down">
+          <span class="variation_text">19%</span>
+        </p>
+      </div>
     </div>
-    <div class="card overview_stats__card">
-      <div class="overview_stats__card__row">
-        <p class="overview_stats__card__title">Views</p>
+    <div class="card card__overview_today">
+      <div class="card__overview_today__row">
+        <p class="card__overview_today__title">Total Views</p>
         <img class="social_media_image" src="images/icon-youtube.svg" alt="youtube_icon">
       </div>
-      1407
-      <p class="variation_up">12%</p>
+      <div class="card__overview_today__row">
+        <h1 class="card__overview_today__number">1407</h1>
+        <p class="variation variation--down">
+          <img src="images/icon-down.svg" alt="down">
+          <span class="variation_text">12%</span>
+        </p>
+      </div>
     </div>
    </section>
 
-    
     <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
       Coded by <a href="#">Kaike Alves Silva</a>.
     </div>
   </div>
