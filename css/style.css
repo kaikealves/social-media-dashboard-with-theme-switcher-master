@@ -45,6 +45,7 @@ body {
 
 body.light_background {
     background: linear-gradient(var(--very_pale_blue) 30%, var(--white) 0%);
+    background-repeat: no-repeat;
 }
 
 .container {
@@ -122,7 +123,7 @@ body.light_background {
     flex-direction: column;
 }
 
-.header__title h1 {
+.header__title__title {
     font-size: 24px;
 }
 
@@ -132,7 +133,7 @@ body.light_background {
 }
 
 .header__title__subtitle--light {
-    color: var(--dark_desaturated_blues);
+    color: var(--dark_desaturated_blue);
 }
 
 .header__toggle_mode {
@@ -249,10 +250,26 @@ body.light_background {
     font-size: 30px;
 }
 
+@media(max-width: 700px) {
+    .header {
+        display: block;
+    }
 
-.attribution {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 10px;
+    .header__title {
+        border-bottom: solid var(--dark_desaturated_blue) 1px;
+        padding-bottom: 10px;
+    }
+
+    .header__title__title {
+        margin-bottom: 10px;
+    }
+
+    .header__toggle_mode {
+        margin-top: 20px;
+    }
+
+    .card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
 }
