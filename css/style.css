@@ -229,7 +229,6 @@ body.light_background {
 }
 
 .card__top_bar--instagram {
-    /* background-color: white; */
     background-image: linear-gradient(90deg, var(--instagram-color-begin), var(--instagram-color-end));
 }
 
@@ -274,11 +273,17 @@ body.light_background {
 }
 
 .attribution {
+    font-size: 11px;
+    text-align: center;
     margin-top: 50px;
 }
 
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
 
-@media(max-width: 700px) {
+
+@media(max-width: 900px) {
     .header {
         display: block;
     }
