@@ -192,6 +192,7 @@ body.light_background {
     align-content: center;
     color: var(--desaturated_blue);
     font-size: 12px;
+    font-weight: 700;
 }
 
 .card__followers__id span {
