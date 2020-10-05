@@ -84,6 +84,10 @@ body.light_background {
     filter: brightness(150%)
 }
 
+.card--light:hover {
+    filter: brightness(90%);
+}
+
 .variation {
     color: var(--lime_green);
     font-size: 10px;
@@ -149,11 +153,30 @@ body.light_background {
     font-weight: 700;
 }
 
-.header__toggle_mode input {
-    /* TODO: implement round toggle button */
+.header__button {
     width: 40px;
-    height: 10px;
-    cursor: pointer;
+    height: 20px;
+    -webkit-appearance: none;
+    background: linear-gradient(90deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+    border-radius: 10px;
+    outline: none;
+}
+
+.header__button:checked {
+    background: hsl(230, 22%, 74%);
+}
+
+.header__button:before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.header__button:checked::before {
+    transform: translateX(20px);
 }
 
 /* Followers row */
@@ -249,6 +272,11 @@ body.light_background {
 .card__overview_today__number {
     font-size: 30px;
 }
+
+.attribution {
+    margin-top: 50px;
+}
+
 
 @media(max-width: 700px) {
     .header {
